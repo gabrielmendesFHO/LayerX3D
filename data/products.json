@@ -2,17 +2,81 @@
   {
     "id": 1,
     "nome": "Dragão Guardião",
-    "preco": 49.90,
     "categoria": "decoracao",
-    "imagem": "https://drive.google.com/uc?export=view&id=ID_DA_IMAGEM_AQUI",
+    "preco": 49.90,
+    "descricao": "Uma majesosa figura de dragão em impressão 3D. Perfeito para decorar sua sala, escritório ou coleção particular. Detalhes intrincados e acabamento refinado.",
+    "imagem": "./assets/products/dragao-guardiao.png",
+    "disponivel": true,
     "destaque": true
   },
   {
     "id": 2,
     "nome": "Chaveiro LayerX",
-    "preco": 19.90,
     "categoria": "chaveiros",
-    "imagem": "https://drive.google.com/uc?export=view&id=ID_DA_IMAGEM_AQUI",
+    "preco": 19.90,
+    "descricao": "Chaveiro personalizado com o logo LayerX 3D. Pequeno, leve e resistente. Ideal para identificar suas chaves com estilo.",
+    "imagem": "./assets/products/chaveiro-layerx.png",
+    "disponivel": true,
     "destaque": true
+  },
+  {
+    "id": 3,
+    "nome": "Suporte Gamer",
+    "categoria": "utilitarios",
+    "preco": 34.90,
+    "descricao": "Suporte ergonômico para controle de videogame ou smartphone. Design moderno em 3D com acabamento profissional. Mantenha seus dispositivos seguros.",
+    "imagem": "./assets/products/suporte-celular.png",
+    "disponivel": true,
+    "destaque": false
+  },
+  {
+    "id": 4,
+    "nome": "Mini Astronauta",
+    "categoria": "colecionaveis",
+    "preco": 24.90,
+    "descricao": "Minúscula figura de astronauta em estilo cartoon. Perfeito para colecionadores e entusiastas de espaço. Grande adição para sua coleção.",
+    "imagem": "./assets/products/mini-astronauta.png",
+    "disponivel": true,
+    "destaque": false
+  },
+  {
+    "id": 5,
+    "nome": "Vaso Geométrico",
+    "categoria": "decoracao",
+    "preco": 54.90,
+    "descricao": "Vaso com design geométrico moderno em impressão 3D. Perfeito para flores ou plantas suculentas. Traz um toque contemporâneo a qualquer ambiente.",
+    "imagem": "./assets/products/vaso-geometrico.png",
+    "disponivel": true,
+    "destaque": false
+  },
+  {
+    "id": 6,
+    "nome": "Organizador de Mesa",
+    "categoria": "organizacao",
+    "preco": 39.90,
+    "descricao": "Organizador multifuncional para sua mesa. Múltiplos compartimentos para canetas, clipes e outros objetos pequenos. Mantenha seu espaço organizado e bonito.",
+    "imagem": "./assets/products/organizador-mesa.png",
+    "disponivel": true,
+    "destaque": false
+  },
+  {
+    "id": 7,
+    "nome": "Porta Fones",
+    "categoria": "organizacao",
+    "preco": 29.90,
+    "descricao": "Suporte elegante para seus fones de ouvido. Mantém seus fones seguros e acessíveis. Design minimalista que se adapta a qualquer ambiente.",
+    "imagem": "./assets/products/porta-fones.png",
+    "disponivel": true,
+    "destaque": false
+  },
+  {
+    "id": 8,
+    "nome": "Caveira Decorativa",
+    "categoria": "decoracao",
+    "preco": 44.90,
+    "descricao": "Caveira artística em impressão 3D com detalhes esculturais. Perfeita para decorar ambientes com personalidade. Um statement piece único.",
+    "imagem": "./assets/products/caveira-decorativa.png",
+    "disponivel": true,
+    "destaque": false
   }
 ]
