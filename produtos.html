@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Conheça todos os produtos e soluções de impressão 3D da LayerX 3D. Decoração, chaveiros, utilitários e muito mais."
+    />
+    <meta name="theme-color" content="#087CF5" />
+    <title>Produtos — LayerX 3D</title>
+
+    <link rel="stylesheet" href="./css/tokens.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container header-container">
+        <a href="index.html" class="logo">
+          <img src="./assets/brand/logo-layerx3d.png" alt="LayerX 3D Logo" />
+        </a>
+        <nav class="nav-menu" id="navMenu">
+          <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="index.html#categorias">Categorias</a></li>
+            <li><a href="index.html#contato">Contato</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a
+            href="https://wa.me/5519999999999"
+            target="_blank"
+            class="btn-icon-whatsapp"
+            aria-label="WhatsApp"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.115.547 4.14 1.584 5.952L.135 23.366l5.535-1.45A12.016 12.016 0 0 0 12.031 24c6.645 0 12.03-5.385 12.03-12.03S18.676 0 12.031 0zm0 21.996c-1.782 0-3.528-.478-5.057-1.385l-.362-.215-3.762.986.997-3.666-.236-.375a9.98 9.98 0 0 1-1.524-5.342c0-5.541 4.51-10.05 10.05-10.05 5.54 0 10.05 4.51 10.05 10.05 0 5.542-4.51 10.051-10.05 10.051zm5.503-7.533c-.302-.151-1.788-.883-2.065-.985-.276-.102-.478-.151-.679.151-.201.302-.78 1.002-.956 1.204-.176.202-.353.227-.655.076-1.52-.765-2.613-1.488-3.633-3.238-.205-.351.201-.326.792-1.512.076-.151.038-.276-.038-.427-.076-.151-.679-1.637-.93-2.24-.245-.588-.493-.508-.679-.518-.176-.01-.378-.01-.58-.01-.202 0-.528.076-.805.378-.277.302-1.056 1.033-1.056 2.518 0 1.486 1.082 2.923 1.233 3.125.151.201 2.134 3.256 5.172 4.564 2.052.884 2.825.96 3.906.804 1.183-.171 3.63-1.483 4.14-2.919.51-1.436.51-2.666.358-2.919-.151-.253-.553-.404-.855-.555z"
+              />
+            </svg>
+          </a>
+          <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero/Seção de Produtos -->
+    <section class="products-section">
+      <div class="container">
+        <div class="section-header">
+          <h1>Nossos Produtos</h1>
+          <p style="color: var(--text-secondary); margin: 0">
+            Explore nossa coleção de produtos personalizados em impressão 3D
+          </p>
+        </div>
+
+        <!-- Filtros -->
+        <div class="filtros" id="filtros">
+          <button class="btn-filtro ativo" data-categoria="todos">Todos</button>
+          <button class="btn-filtro" data-categoria="decoracao">
+            Decoração
+          </button>
+          <button class="btn-filtro" data-categoria="chaveiros">
+            Chaveiros
+          </button>
+          <button class="btn-filtro" data-categoria="utilitarios">
+            Utilitários
+          </button>
+          <button class="btn-filtro" data-categoria="organizacao">
+            Organização
+          </button>
+          <button class="btn-filtro" data-categoria="colecionaveis">
+            Colecionáveis
+          </button>
+        </div>
+
+        <!-- Grid de Produtos -->
+        <div class="produtos-grid" id="produtosGrid">
+          <!-- Preenchido dinamicamente pelo js/produtos.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal de Detalhes do Produto -->
+    <div class="modal" id="produtoModal">
+      <div class="modal-content">
+        <button class="modal-close" id="modalClose">&times;</button>
+        <div class="modal-header">
+          <h2 id="modalProdutoNome"></h2>
+          <div class="modal-categoria" id="modalProdutoCategoria"></div>
+        </div>
+        <div class="modal-body">
+          <img class="modal-image" id="modalProdutoImagem" src="" alt="" />
+          <div>
+            <p class="modal-descricao" id="modalProdutoDescricao"></p>
+          </div>
+          <div>
+            <p class="modal-disponivel">
+              Disponível: <span id="modalProdutoDisponivel"></span>
+            </p>
+          </div>
+          <div class="modal-preco" id="modalProdutoPreco"></div>
+          <div class="modal-actions">
+            <a
+              href="#"
+              class="btn-primary"
+              id="modalBtnWhatsapp"
+              target="_blank"
+              >Tenho Interesse 💬</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="contato">
+      <div class="container footer-content">
+        <div class="footer-section">
+          <h3>LayerX 3D</h3>
+          <p>
+            Impressão 3D com qualidade, precisão e criatividade sem limites.
+            Transforme suas ideias em produtos reais.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://wa.me/5519999999999"
+              target="_blank"
+              aria-label="WhatsApp"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.115.547 4.14 1.584 5.952L.135 23.366l5.535-1.45A12.016 12.016 0 0 0 12.031 24c6.645 0 12.03-5.385 12.03-12.03S18.676 0 12.031 0zm0 21.996c-1.782 0-3.528-.478-5.057-1.385l-.362-.215-3.762.986.997-3.666-.236-.375a9.98 9.98 0 0 1-1.524-5.342c0-5.541 4.51-10.05 10.05-10.05 5.54 0 10.05 4.51 10.05 10.05 0 5.542-4.51 10.051-10.05 10.051zm5.503-7.533c-.302-.151-1.788-.883-2.065-.985-.276-.102-.478-.151-.679.151-.201.302-.78 1.002-.956 1.204-.176.202-.353.227-.655.076-1.52-.765-2.613-1.488-3.633-3.238-.205-.351.201-.326.792-1.512.076-.151.038-.276-.038-.427-.076-.151-.679-1.637-.93-2.24-.245-.588-.493-.508-.679-.518-.176-.01-.378-.01-.58-.01-.202 0-.528.076-.805.378-.277.302-1.056 1.033-1.056 2.518 0 1.486 1.082 2.923 1.233 3.125.151.201 2.134 3.256 5.172 4.564 2.052.884 2.825.96 3.906.804 1.183-.171 3.63-1.483 4.14-2.919.51-1.436.51-2.666.358-2.919-.151-.253-.553-.404-.855-.555z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Navegação</h3>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="index.html#categorias">Categorias</a></li>
+            <li><a href="index.html#contato">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Informações</h3>
+          <ul>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Termos de Serviço</a></li>
+            <li><a href="#">Frete e Entregas</a></li>
+            <li><a href="#">Devoluções</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contato</h3>
+          <p>📞 (19) 99999-9999</p>
+          <p>
+            💬 WhatsApp:
+            <a href="https://wa.me/5519999999999" target="_blank"
+              >(19) 99999-9999</a
+            >
+          </p>
+          <p>📧 contato@layerx3d.com</p>
+          <p>🕐 Seg-Sex: 8h-18h<br />Sáb: 8h-13h</p>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>&copy; 2024 LayerX 3D. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="./js/menu.js"></script>
+    <script src="./js/produtos.js"></script>
+  </body>
+</html>

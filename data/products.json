@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "nome": "Dragão Guardião",
+    "preco": 49.90,
+    "categoria": "decoracao",
+    "imagem": "https://drive.google.com/uc?export=view&id=ID_DA_IMAGEM_AQUI",
+    "destaque": true
+  },
+  {
+    "id": 2,
+    "nome": "Chaveiro LayerX",
+    "preco": 19.90,
+    "categoria": "chaveiros",
+    "imagem": "https://drive.google.com/uc?export=view&id=ID_DA_IMAGEM_AQUI",
+    "destaque": true
+  }
+]

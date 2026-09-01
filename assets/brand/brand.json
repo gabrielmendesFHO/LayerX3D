@@ -1,0 +1,23 @@
+{
+  "name": "LayerX 3D",
+  "palette": {
+    "blue": "#087CF5",
+    "blue_dark": "#0054B8",
+    "black": "#0D0D0D",
+    "dark": "#111827",
+    "white": "#FFFFFF",
+    "light": "#F4F5F7",
+    "border": "#E5E7EB",
+    "text": "#111111",
+    "muted": "#666666"
+  },
+  "categories": [
+    "Decoração",
+    "Chaveiros",
+    "Peças",
+    "Organização",
+    "Colecionáveis"
+  ],
+  "tagline": "IMPRESSÃO 3D • CRIAÇÃO SEM LIMITES",
+  "notes": "Generated reference assets for the LayerX 3D homepage wireframe. Product images are visual references and should be replaced by real product photos before production."
+}
