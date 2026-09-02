@@ -36,9 +36,9 @@ button {
 
 .container {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1200px; /* ou 1440px, dependendo da sua preferência */
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px; 
 }
 
 /* ========== HEADER ========== */
@@ -55,13 +55,17 @@ button {
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .logo img {
   height: 40px;
   width: auto;
   transition: transform var(--transition-fast);
+}
+
+.logo {
+  margin-right: 36px;
 }
 
 .logo:hover img {
@@ -119,12 +123,14 @@ button {
   display: flex;
   align-items: center;
   gap: 16px;
+  margin-left: auto;
 }
 
 .btn-icon-whatsapp {
   color: var(--brand-blue);
   display: flex;
   align-items: center;
+  font-size: 1.5rem;
   transition: transform var(--transition-fast);
 }
 
@@ -798,6 +804,14 @@ button {
 
   .logo img {
     height: 32px;
+  }
+
+  .logo {
+    margin-right: 0;
+  }
+
+  .btn-icon-whatsapp {
+    font-size: 1.35rem;
   }
 
   .hero {
