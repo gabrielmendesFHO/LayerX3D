@@ -241,43 +241,6 @@ button {
   box-shadow: 0 12px 32px var(--shadow-md);
 }
 
-/* ========== BENEFÍCIOS ========== */
-.benefits {
-  background-color: var(--bg-surface);
-  padding: 40px 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.benefits-grid {
-  display: flex;
-  justify-content: space-around;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.benefit-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 12px;
-  flex: 1;
-  min-width: 150px;
-}
-
-.benefit-item svg {
-  stroke: var(--brand-blue);
-  width: 40px;
-  height: 40px;
-}
-
-.benefit-item span {
-  color: var(--text-primary);
-  font-weight: 500;
-  font-size: 0.95rem;
-}
-
 /* ========== SEÇÕES GENÉRICAS ========== */
 .section-header {
   display: flex;
@@ -352,10 +315,17 @@ button {
   border-color: var(--brand-blue);
 }
 
-.cat-card img,
-.cat-icon img {
-  width: 48px;
-  height: 48px;
+.cat-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(8, 124, 245, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-blue);
+  font-size: 1.4rem;
+  border: 1px solid rgba(8, 124, 245, 0.12);
 }
 
 .cat-card span {
@@ -370,33 +340,36 @@ button {
 
 .filtros {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   margin-bottom: 32px;
   flex-wrap: wrap;
 }
 
 .btn-filtro {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border);
+  background-color: rgba(8, 124, 245, 0.04);
+  border: 1px solid rgba(8, 124, 245, 0.12);
   color: var(--text-primary);
   padding: 10px 16px;
-  border-radius: var(--radius-md);
+  border-radius: 999px;
   cursor: pointer;
   font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   transition: all var(--transition-fast);
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
 .btn-filtro:hover {
   border-color: var(--brand-blue);
   color: var(--brand-blue);
+  transform: translateY(-1px);
 }
 
 .btn-filtro.ativo {
-  background-color: var(--brand-blue);
+  background: linear-gradient(135deg, var(--brand-blue), #38a3ff);
   color: #FFFFFF;
   border-color: var(--brand-blue);
+  box-shadow: 0 8px 18px rgba(8, 124, 245, 0.22);
 }
 
 .produtos-grid {
@@ -440,29 +413,6 @@ button {
 
 .card-produto:hover img {
   transform: scale(1.05);
-}
-
-.btn-fav {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background: rgba(255, 255, 255, 0.9);
-  border: none;
-  cursor: pointer;
-  font-size: 1.5rem;
-  z-index: 2;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all var(--transition-fast);
-}
-
-.btn-fav:hover {
-  background: #FFFFFF;
-  transform: scale(1.1);
 }
 
 .card-info {

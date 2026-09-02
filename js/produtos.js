@@ -1,10 +1,56 @@
 // js/produtos.js
 const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRHHe1stIgM3vmW_g-IpJ8TxxrB_1svOT4zQ7uRdoaBiMHLMMBR_hVl-QXUXvN7DMtPqbCavk257aVd/pub?gid=723108535&single=true&output=csv";
-const WA_PHONE = "5519999999999";
+const WA_PHONE = "5519988390218";
+
+let produtosGlobais = [];
+let filtroAtual = 'todos';
 
 document.addEventListener('DOMContentLoaded', () => {
+    inicializarFiltros();
     carregarProdutos();
 });
+
+function inicializarFiltros() {
+    document.querySelectorAll('.btn-filtro').forEach(botao => {
+        botao.addEventListener('click', () => {
+            const categoria = botao.dataset.filter || 'todos';
+            aplicarFiltro(categoria, true);
+        });
+    });
+
+    document.querySelectorAll('.cat-card').forEach(cartao => {
+        cartao.addEventListener('click', (event) => {
+            event.preventDefault();
+            const categoria = cartao.dataset.category || 'todos';
+            aplicarFiltro(categoria, true);
+        });
+    });
+}
+
+function aplicarFiltro(categoria = 'todos', scrollParaProdutos = false) {
+    filtroAtual = categoria;
+
+    document.querySelectorAll('.btn-filtro').forEach(botao => {
+        const ativo = (botao.dataset.filter || 'todos') === categoria;
+        botao.classList.toggle('ativo', ativo);
+    });
+
+    document.querySelectorAll('.cat-card').forEach(cartao => {
+        const ativo = (cartao.dataset.category || 'todos') === categoria;
+        cartao.classList.toggle('active', ativo);
+    });
+
+    const cards = document.querySelectorAll('.card-produto');
+    cards.forEach(card => {
+        const categoriaCard = (card.dataset.categoria || '').trim();
+        const deveExibir = categoria === 'todos' || categoriaCard === categoria;
+        card.style.display = deveExibir ? '' : 'none';
+    });
+
+    if (scrollParaProdutos) {
+        document.getElementById('produtos')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
 
 async function carregarProdutos() {
     const grid = document.querySelector('.produtos-grid');
@@ -17,7 +63,9 @@ async function carregarProdutos() {
 
         const csvText = await response.text();
         const produtos = csvParaJSON(csvText);
+        produtosGlobais = produtos;
         renderizarProdutos(produtos);
+        aplicarFiltro(filtroAtual, false);
     } catch (error) {
         console.error("Erro ao carregar a planilha de produtos:", error);
         if (grid) {
@@ -101,7 +149,6 @@ function renderizarProdutos(produtos) {
         return `
         <article class="card-produto" data-categoria="${(produto.categoria || '').toLowerCase()}">
             <div class="card-produto-image">
-                <button class="btn-fav" aria-label="Favoritar" onclick="this.textContent = this.textContent === '🤍' ? '❤️' : '🤍'">🤍</button>
                 <img src="${imagemDireta}" alt="${produto.nome}" loading="lazy">
             </div>
             <div class="card-info">

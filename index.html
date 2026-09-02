@@ -18,24 +18,24 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
   </head>
-  <body>
+  <body id="top">
     <!-- Header -->
     <header class="header">
       <div class="container header-container">
-        <a href="index.html" class="logo">
+        <a href="#top" class="logo">
           <img src="./assets/brand/LayerXvetor.svg" alt="LayerX 3D Logo" />
         </a>
         <nav class="nav-menu" id="navMenu">
           <ul class="nav-links">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="#top">Início</a></li>
+            <li><a href="#produtos">Produtos</a></li>
             <li><a href="#categorias">Categorias</a></li>
             <li><a href="#contato">Contato</a></li>
           </ul>
         </nav>
         <div class="header-actions">
           <a
-            href="https://wa.me/5519999999999"
+            href="https://wa.me/5519988390218"
             target="_blank"
             class="btn-icon-whatsapp"
             aria-label="WhatsApp"
@@ -61,7 +61,7 @@
             Transforme suas ideias em realidade com nossos produtos
             personalizados.
           </p>
-          <a href="produtos.html" class="btn-primary">Ver Produtos</a>
+          <a href="#produtos" class="btn-primary">Ver Produtos</a>
         </div>
         <div class="hero-image">
           <img
@@ -72,50 +72,36 @@
       </div>
     </section>
 
-    <!-- Benefícios -->
-    <section class="benefits">
-      <div class="container benefits-grid">
-        <div class="benefit-item">
-          <i class="fas fa-cube"></i>
-          <span>Alta Qualidade</span>
-        </div>
-        <div class="benefit-item">
-          <i class="fas fa-sliders-h"></i>
-          <span>Personalizado</span>
-        </div>
-        <div class="benefit-item">
-          <i class="fas fa-truck"></i>
-          <span>Entrega Rápida</span>
-        </div>
-      </div>
-    </section>
-
     <!-- Categorias -->
     <section class="categories" id="categorias">
       <div class="container">
         <div class="section-header">
           <h2>Categorias</h2>
-          <a href="produtos.html" class="link-action">Ver todas →</a>
+          <a href="#produtos" class="link-action">Ver todas →</a>
         </div>
         <div class="categories-grid">
-          <a href="produtos.html?cat=decoracao" class="cat-card">
-            <img src="./assets/icons/categorias.png" alt="Decoração" />
+          <a href="#produtos" class="cat-card" data-category="decoracao">
+            <div class="cat-icon"><i class="fa-solid fa-cube"></i></div>
             <span>Decoração</span>
           </a>
-          <a href="produtos.html?cat=chaveiros" class="cat-card">
-            <img src="./assets/icons/categorias.png" alt="Chaveiros" />
+          <a href="#produtos" class="cat-card" data-category="chaveiros">
+            <div class="cat-icon"><i class="fa-solid fa-key"></i></div>
             <span>Chaveiros</span>
           </a>
-          <a href="produtos.html?cat=utilitarios" class="cat-card">
-            <img src="./assets/icons/categorias.png" alt="Utilitários" />
+          <a href="#produtos" class="cat-card" data-category="utilitarios">
+            <div class="cat-icon">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+            </div>
             <span>Utilitários</span>
           </a>
-          <a href="produtos.html?cat=organizacao" class="cat-card">
-            <img src="./assets/icons/categorias.png" alt="Organização" />
+          <a href="#produtos" class="cat-card" data-category="organizacao">
+            <div class="cat-icon">
+              <i class="fa-solid fa-boxes-stacked"></i>
+            </div>
             <span>Organização</span>
           </a>
-          <a href="produtos.html?cat=colecionaveis" class="cat-card">
-            <img src="./assets/icons/categorias.png" alt="Colecionáveis" />
+          <a href="#produtos" class="cat-card" data-category="colecionaveis">
+            <div class="cat-icon"><i class="fa-solid fa-star"></i></div>
             <span>Colecionáveis</span>
           </a>
         </div>
@@ -123,14 +109,34 @@
     </section>
 
     <!-- Produtos em Destaque -->
-    <section class="products-section">
+    <section class="products-section" id="produtos">
       <div class="container">
         <div class="section-header">
           <h2>Produtos em Destaque</h2>
-          <a href="produtos.html" class="link-action"
-            >Ver todos os produtos →</a
-          >
+          <a href="#produtos" class="link-action">Ver todos os produtos →</a>
         </div>
+
+        <div class="filtros" aria-label="Filtros de categoria">
+          <button class="btn-filtro ativo" data-filter="todos" type="button">
+            Todos
+          </button>
+          <button class="btn-filtro" data-filter="decoracao" type="button">
+            Decoração
+          </button>
+          <button class="btn-filtro" data-filter="chaveiros" type="button">
+            Chaveiros
+          </button>
+          <button class="btn-filtro" data-filter="utilitarios" type="button">
+            Utilitários
+          </button>
+          <button class="btn-filtro" data-filter="organizacao" type="button">
+            Organização
+          </button>
+          <button class="btn-filtro" data-filter="colecionaveis" type="button">
+            Colecionáveis
+          </button>
+        </div>
+
         <div class="produtos-grid">
           <!-- O JavaScript vai injetar os cards aqui -->
         </div>
@@ -148,7 +154,7 @@
           </p>
           <div class="social-links">
             <a
-              href="https://wa.me/5519999999999"
+              href="https://wa.me/5519988390218"
               target="_blank"
               aria-label="WhatsApp"
             >
@@ -159,8 +165,8 @@
         <div class="footer-section">
           <h3>Navegação</h3>
           <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="#top">Início</a></li>
+            <li><a href="#produtos">Produtos</a></li>
             <li><a href="#categorias">Categorias</a></li>
             <li><a href="#contato">Contato</a></li>
           </ul>
@@ -176,11 +182,11 @@
         </div>
         <div class="footer-section">
           <h3>Contato</h3>
-          <p>📞 (19) 99999-9999</p>
+          <p>📞 (19) 19 98839-0218</p>
           <p>
             💬 WhatsApp:
-            <a href="https://wa.me/5519999999999" target="_blank"
-              >(19) 99999-9999</a
+            <a href="https://wa.me/5519988390218" target="_blank"
+              >(19) 98839-0218</a
             >
           </p>
           <p>📧 contato@layerx3d.com</p>
